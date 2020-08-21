@@ -20,7 +20,7 @@
                         <rect key="frame" x="10" y="10" width="60" height="80"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="Azh-Kg-UvK" secondAttribute="height" multiplier="12:16" id="85f-UH-OXN"/>
-                            <constraint firstAttribute="height" constant="80" id="UrU-PZ-yNn"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="UrU-PZ-yNn"/>
                         </constraints>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="2o0-bV-BBH">

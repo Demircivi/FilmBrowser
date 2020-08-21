@@ -39,14 +39,28 @@ class FilmDetailViewController: UIViewController, ViewModelBindable {
     }
     
     func bindedViewModel() {
-        self.viewModel.title.bind(to: self.rx.title).disposed(by: self.disposeBag)
+        bindComponents()
+    }
+    
+    private func bindComponents() {
+        self.viewModel.title
+            .bind(to: self.rx.title)
+            .disposed(by: self.disposeBag)
         
-        self.viewModel.imageResource.bind(to: self.imageView.kf.rx.image()).disposed(by: self.disposeBag)
+        self.viewModel.imageResource
+            .bind(to: self.imageView.kf.rx.image())
+            .disposed(by: self.disposeBag)
         
-        self.viewModel.title.bind(to: self.titleLabel.rx.text).disposed(by: self.disposeBag)
+        self.viewModel.title
+            .bind(to: self.titleLabel.rx.text)
+            .disposed(by: self.disposeBag)
         
-        self.viewModel.type.bind(to: self.typeLabel.rx.text).disposed(by: self.disposeBag)
+        self.viewModel.type
+            .bind(to: self.typeLabel.rx.text)
+            .disposed(by: self.disposeBag)
         
-        self.viewModel.year.bind(to: self.yearLabel.rx.text).disposed(by: self.disposeBag)
+        self.viewModel.year
+            .bind(to: self.yearLabel.rx.text)
+            .disposed(by: self.disposeBag)
     }
 }

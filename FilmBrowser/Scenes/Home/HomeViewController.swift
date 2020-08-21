@@ -11,6 +11,7 @@ import RxSwift
 import RxCocoa
 
 class HomeViewController: UIViewController, ViewModelBindable {
+    private static let homeTitle = "Home"
     private static let searchMilliseconds = 300
     
     typealias ViewModelType = HomeViewModel
@@ -32,7 +33,8 @@ class HomeViewController: UIViewController, ViewModelBindable {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.title = "Home"
+        self.title = HomeViewController.homeTitle
+        
         self.navigationItem.largeTitleDisplayMode = .always
         self.navigationController?.navigationBar.prefersLargeTitles = true
     }
