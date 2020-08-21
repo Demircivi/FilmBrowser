@@ -12,17 +12,20 @@ import RxCocoa
 import Kingfisher
 
 class HomeTableViewCellViewModel {
-    public let imageURL: BehaviorRelay<Kingfisher.Resource>
+    public let imageResource = BehaviorRelay<Kingfisher.Resource?>(value: nil)
     public let title: BehaviorRelay<String>
     public let type: BehaviorRelay<String>
     public let year: BehaviorRelay<String>
     
     public init(film: Film) {
-        guard let imageURL = URL(string: film.posterUrl) else {
-            fatalError("Failed to convert poster URL to URL")
+        if let imageURLString = film.sanitizedPosterURL {
+            guard let imageURL = URL(string: imageURLString) else {
+                fatalError("Failed to convert poster URL to URL")
+            }
+            
+            self.imageResource.accept(imageURL)
         }
         
-        self.imageURL = BehaviorRelay(value: imageURL)
         self.title = BehaviorRelay(value: film.title)
         self.type = BehaviorRelay(value: film.type)
         self.year = BehaviorRelay(value: film.year)

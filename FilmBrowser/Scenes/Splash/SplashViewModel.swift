@@ -13,7 +13,7 @@ import RxCocoa
 
 internal class SplashViewModel: ViewModelBase<AppRoute> {
     private static let splashLabelConfigKey = "splash_label"
-    private static let splashTimeoutSeconds = 1
+    private static let splashTimeoutSeconds = 3
     
     private let configService: ConfigService
     

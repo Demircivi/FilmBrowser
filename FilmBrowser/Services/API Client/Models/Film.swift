@@ -13,13 +13,17 @@ struct Film: Decodable {
     let year: String
     let imdbId: String
     let type: String
-    let posterUrl: String
+    let posterURL: String
+    
+    public var sanitizedPosterURL: String? {
+        return self.posterURL == "N/A" ? nil : self.posterURL
+    }
     
     enum CodingKeys: String, CodingKey {
         case title = "Title"
         case year = "Year"
         case imdbId = "imdbID"
         case type = "Type"
-        case posterUrl = "Poster"
+        case posterURL = "Poster"
     }
 }

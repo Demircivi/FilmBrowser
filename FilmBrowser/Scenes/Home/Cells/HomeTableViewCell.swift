@@ -24,7 +24,7 @@ class HomeTableViewCell: UITableViewCell, ViewModelBindable {
     @IBOutlet weak var yearLabel: UILabel!
     
     func bindedViewModel() {
-        self.viewModel.imageURL
+        self.viewModel.imageResource
             .bind(to: self.filmImageView.kf.rx.image())
             .disposed(by: self.disposeBag)
         

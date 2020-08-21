@@ -27,6 +27,10 @@
 		C37C3B1A24EC2025002A3C8B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37C3B1924EC2025002A3C8B /* AppCoordinator.swift */; };
 		C37C9B4624EDB6F4009C4C4D /* ConfigGetError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37C9B4524EDB6F4009C4C4D /* ConfigGetError.swift */; };
 		C3A14D6224EDA7FD00B66065 /* ConfigService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A14D6124EDA7FD00B66065 /* ConfigService.swift */; };
+		C3B055E724F0398900D4B26B /* HomeViewControllerMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B055E624F0398900D4B26B /* HomeViewControllerMessageView.swift */; };
+		C3B055EA24F0464700D4B26B /* FirebaseAnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B055E924F0464700D4B26B /* FirebaseAnalyticsService.swift */; };
+		C3B055F024F0466F00D4B26B /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B055EF24F0466F00D4B26B /* AnalyticsService.swift */; };
+		C3B055F324F046BE00D4B26B /* WrapperAnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B055F224F046BE00D4B26B /* WrapperAnalyticsService.swift */; };
 		C3E8A00C24ED9C5200A64FBF /* Transition+PushAsRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E8A00B24ED9C5200A64FBF /* Transition+PushAsRootViewController.swift */; };
 		C3E8A00F24EDA28300A64FBF /* FirebaseRemoteConfigService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E8A00E24EDA28300A64FBF /* FirebaseRemoteConfigService.swift */; };
 		C3E8A01324EDA6B200A64FBF /* ConfigLoadError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E8A01224EDA6B200A64FBF /* ConfigLoadError.swift */; };
@@ -88,6 +92,10 @@
 		C37C3B1924EC2025002A3C8B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		C37C9B4524EDB6F4009C4C4D /* ConfigGetError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigGetError.swift; sourceTree = "<group>"; };
 		C3A14D6124EDA7FD00B66065 /* ConfigService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigService.swift; sourceTree = "<group>"; };
+		C3B055E624F0398900D4B26B /* HomeViewControllerMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerMessageView.swift; sourceTree = "<group>"; };
+		C3B055E924F0464700D4B26B /* FirebaseAnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAnalyticsService.swift; sourceTree = "<group>"; };
+		C3B055EF24F0466F00D4B26B /* AnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsService.swift; sourceTree = "<group>"; };
+		C3B055F224F046BE00D4B26B /* WrapperAnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrapperAnalyticsService.swift; sourceTree = "<group>"; };
 		C3E8A00B24ED9C5200A64FBF /* Transition+PushAsRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transition+PushAsRootViewController.swift"; sourceTree = "<group>"; };
 		C3E8A00E24EDA28300A64FBF /* FirebaseRemoteConfigService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseRemoteConfigService.swift; sourceTree = "<group>"; };
 		C3E8A01224EDA6B200A64FBF /* ConfigLoadError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigLoadError.swift; sourceTree = "<group>"; };
@@ -235,6 +243,48 @@
 			path = Implementation;
 			sourceTree = "<group>";
 		};
+		C3B055E524F0397300D4B26B /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				C3B055E624F0398900D4B26B /* HomeViewControllerMessageView.swift */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		C3B055E824F0460A00D4B26B /* Analytics Service */ = {
+			isa = PBXGroup;
+			children = (
+				C3B055EB24F0465800D4B26B /* Abstract */,
+				C3B055EE24F0466700D4B26B /* Implementation */,
+			);
+			path = "Analytics Service";
+			sourceTree = "<group>";
+		};
+		C3B055EB24F0465800D4B26B /* Abstract */ = {
+			isa = PBXGroup;
+			children = (
+				C3B055EF24F0466F00D4B26B /* AnalyticsService.swift */,
+			);
+			path = Abstract;
+			sourceTree = "<group>";
+		};
+		C3B055EE24F0466700D4B26B /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				C3B055F124F0467300D4B26B /* Services */,
+				C3B055F224F046BE00D4B26B /* WrapperAnalyticsService.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		C3B055F124F0467300D4B26B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C3B055E924F0464700D4B26B /* FirebaseAnalyticsService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		C3C647E524EE83D5009184A6 /* REST Client */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,6 +300,7 @@
 				C35F448124EEEE780006FBAA /* API Client */,
 				C3C647E524EE83D5009184A6 /* REST Client */,
 				C3E8A01024EDA69C00A64FBF /* Firebase Remote Config */,
+				C3B055E824F0460A00D4B26B /* Analytics Service */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -356,6 +407,7 @@
 		C3F8A28524EC2DB7001B391D /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				C3B055E524F0397300D4B26B /* Custom Views */,
 				C35F448F24EEFE6D0006FBAA /* Cells */,
 				C3F8A28624EC2DC6001B391D /* HomeViewController.swift */,
 				C3F8A28724EC2DC6001B391D /* HomeViewController.xib */,
@@ -595,6 +647,8 @@
 				C3E8A00C24ED9C5200A64FBF /* Transition+PushAsRootViewController.swift in Sources */,
 				C34C0C6924EEC2BA0090BBD9 /* Reactive+MBProgressHUD.swift in Sources */,
 				C3F8A29424EC3DDB001B391D /* AppDelegate+Firebase.swift in Sources */,
+				C3B055F024F0466F00D4B26B /* AnalyticsService.swift in Sources */,
+				C3B055E724F0398900D4B26B /* HomeViewControllerMessageView.swift in Sources */,
 				C34C0C6624EEA0110090BBD9 /* Container+ResolveOrThrow.swift in Sources */,
 				C35F448324EEEE7E0006FBAA /* APIClient.swift in Sources */,
 				C34C0C6B24EEC3000090BBD9 /* UIApplication+FirstKeyWindow.swift in Sources */,
@@ -602,6 +656,7 @@
 				C3F8A28B24EC2DCE001B391D /* HomeViewModel.swift in Sources */,
 				C3F8A28424EC271E001B391D /* ViewModelBindable.swift in Sources */,
 				C3F8A28824EC2DC6001B391D /* HomeViewController.swift in Sources */,
+				C3B055F324F046BE00D4B26B /* WrapperAnalyticsService.swift in Sources */,
 				C3ECD6CA24EC54500025CA33 /* FilmDetailViewModel.swift in Sources */,
 				C3F8A28D24EC2E15001B391D /* HomeCoordinator.swift in Sources */,
 				C3E8A01324EDA6B200A64FBF /* ConfigLoadError.swift in Sources */,
@@ -612,6 +667,7 @@
 				C3E8A00F24EDA28300A64FBF /* FirebaseRemoteConfigService.swift in Sources */,
 				C35F449224EEFE820006FBAA /* HomeTableViewCell.swift in Sources */,
 				C3F8A29B24EC4F0A001B391D /* TypeHelper.swift in Sources */,
+				C3B055EA24F0464700D4B26B /* FirebaseAnalyticsService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

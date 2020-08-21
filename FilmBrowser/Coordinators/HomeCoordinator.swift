@@ -12,7 +12,7 @@ import class Swinject.Container
 
 internal enum HomeRoute: Route {
     case home
-    case filmDetail(imdbId: String)
+    case filmDetail(film: Film)
 }
 
 internal class HomeCoordinator: NavigationCoordinator<HomeRoute> {
@@ -29,8 +29,8 @@ internal class HomeCoordinator: NavigationCoordinator<HomeRoute> {
         case .home:
             return getHomeTransition(for: route)
             
-        case let .filmDetail(imdbId):
-            return getFilmDetailTransition(for: route, imdbId: imdbId)
+        case let .filmDetail(film):
+            return getFilmDetailTransition(for: route, film: film)
         }
     }
     
@@ -42,8 +42,9 @@ internal class HomeCoordinator: NavigationCoordinator<HomeRoute> {
         return .push(viewController)
     }
     
-    private func getFilmDetailTransition(for route: Route, imdbId: String) -> NavigationTransition {
-        let viewModel = FilmDetailViewModel(router: unownedRouter)
+    private func getFilmDetailTransition(for route: Route, film: Film) -> NavigationTransition {
+        let analyticsService = self.container.resolveOrThrow(AnalyticsService.self)
+        let viewModel = FilmDetailViewModel(router: unownedRouter, film: film, analyticsService: analyticsService)
         let viewController = self.container.resolveViewControllerOrThrow(FilmDetailViewController.self, viewModel: viewModel)
         
         return .push(viewController)

@@ -34,5 +34,6 @@ extension AppDelegate {
             return APIClient(restClient: restClient)
         }
         self.container.autoregister(ConfigService.self, initializer: FirebaseRemoteConfigService.init)
+        self.container.autoregister(AnalyticsService.self, initializer: WrapperAnalyticsService.init)
     }
 }
