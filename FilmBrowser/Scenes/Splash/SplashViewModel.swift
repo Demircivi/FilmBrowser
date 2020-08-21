@@ -17,6 +17,7 @@ internal class SplashViewModel: ViewModelBase<AppRoute> {
     private static let splashTimeoutSeconds = 3
     
     private let configService: ConfigService
+    private let reachability = Reachability.forInternetConnection()!
     
     public required init(router: UnownedRouter<AppRoute>, configService: ConfigService) {
         self.configService = configService
@@ -28,7 +29,7 @@ internal class SplashViewModel: ViewModelBase<AppRoute> {
     public let title = BehaviorSubject<String?>(value: nil)
     
     public func loaded() {
-        if !Reachability.forInternetConnection().isReachable() {
+        if !self.reachability.isReachable() {
             goNoInternet()
             
             return
