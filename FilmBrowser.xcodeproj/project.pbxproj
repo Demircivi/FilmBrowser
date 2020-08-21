@@ -10,7 +10,6 @@
 		08CEDB063CA7F92730071609 /* Pods_FilmBrowser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B783AB0DFF86E0C4D75B6CC1 /* Pods_FilmBrowser.framework */; };
 		68CFD8F0A3D295789E5C5E0B /* Pods_FilmBrowserTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 146000B73C5BDF093DA64204 /* Pods_FilmBrowserTests.framework */; };
 		C34C0C6624EEA0110090BBD9 /* Container+ResolveOrThrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34C0C6524EEA0110090BBD9 /* Container+ResolveOrThrow.swift */; };
-		C34C0C6924EEC2BA0090BBD9 /* Reactive+MBProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34C0C6824EEC2BA0090BBD9 /* Reactive+MBProgressHUD.swift */; };
 		C34C0C6B24EEC3000090BBD9 /* UIApplication+FirstKeyWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34C0C6A24EEC3000090BBD9 /* UIApplication+FirstKeyWindow.swift */; };
 		C34C0C6D24EEE3220090BBD9 /* RESTClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34C0C6C24EEE3220090BBD9 /* RESTClient.swift */; };
 		C34C0C6F24EEE3D50090BBD9 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34C0C6E24EEE3D50090BBD9 /* HTTPRequest.swift */; };
@@ -75,7 +74,6 @@
 		8CAA4CD9B30C79F1A60F1ED7 /* Pods-FilmBrowser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FilmBrowser.debug.xcconfig"; path = "Target Support Files/Pods-FilmBrowser/Pods-FilmBrowser.debug.xcconfig"; sourceTree = "<group>"; };
 		B783AB0DFF86E0C4D75B6CC1 /* Pods_FilmBrowser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FilmBrowser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C34C0C6524EEA0110090BBD9 /* Container+ResolveOrThrow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Container+ResolveOrThrow.swift"; sourceTree = "<group>"; };
-		C34C0C6824EEC2BA0090BBD9 /* Reactive+MBProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reactive+MBProgressHUD.swift"; sourceTree = "<group>"; };
 		C34C0C6A24EEC3000090BBD9 /* UIApplication+FirstKeyWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+FirstKeyWindow.swift"; sourceTree = "<group>"; };
 		C34C0C6C24EEE3220090BBD9 /* RESTClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTClient.swift; sourceTree = "<group>"; };
 		C34C0C6E24EEE3D50090BBD9 /* HTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
@@ -433,7 +431,6 @@
 				C3F8A29824EC43E7001B391D /* Container+ViewController.swift */,
 				C34C0C6524EEA0110090BBD9 /* Container+ResolveOrThrow.swift */,
 				C3E8A00B24ED9C5200A64FBF /* Transition+PushAsRootViewController.swift */,
-				C34C0C6824EEC2BA0090BBD9 /* Reactive+MBProgressHUD.swift */,
 				C34C0C6A24EEC3000090BBD9 /* UIApplication+FirstKeyWindow.swift */,
 				C35F448D24EEF4AD0006FBAA /* String+EqualsCaseInsensitive.swift */,
 			);
@@ -645,7 +642,6 @@
 				C3A14D6224EDA7FD00B66065 /* ConfigService.swift in Sources */,
 				C3ED5E6E24EC180E00A1CD71 /* AppDelegate.swift in Sources */,
 				C3E8A00C24ED9C5200A64FBF /* Transition+PushAsRootViewController.swift in Sources */,
-				C34C0C6924EEC2BA0090BBD9 /* Reactive+MBProgressHUD.swift in Sources */,
 				C3F8A29424EC3DDB001B391D /* AppDelegate+Firebase.swift in Sources */,
 				C3B055F024F0466F00D4B26B /* AnalyticsService.swift in Sources */,
 				C3B055E724F0398900D4B26B /* HomeViewControllerMessageView.swift in Sources */,

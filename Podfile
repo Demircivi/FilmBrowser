@@ -18,6 +18,7 @@ target 'FilmBrowser' do
   pod 'SwinjectAutoregistration'
   pod 'JGProgressHUD'
   pod 'RxKingfisher'
+  pod 'Reachability'
 
   target 'FilmBrowserTests' do
     inherit! :search_paths

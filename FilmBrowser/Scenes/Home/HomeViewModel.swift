@@ -21,6 +21,7 @@ internal class HomeViewModel: ViewModelBase<HomeRoute> {
     
     public let films = BehaviorRelay<[Film]>(value: [])
     public let message = BehaviorRelay<String?>(value: HomeViewModel.initialMessage)
+    public let loading = BehaviorRelay<Bool>(value: false)
     
     private let disposeBag = DisposeBag()
     
@@ -35,8 +36,14 @@ internal class HomeViewModel: ViewModelBase<HomeRoute> {
     }
     
     public func fetch(film name: String) {
+        self.loading.accept(true)
+        
         self.apiClient.searchFilm(name: name)
             .subscribe(onSuccess: { response in
+                defer {
+                    self.loading.accept(false)
+                }
+                
                 if let error = response.error {
                     self.message.accept(error)
                     self.films.accept([])

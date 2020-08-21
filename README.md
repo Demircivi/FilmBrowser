@@ -23,6 +23,7 @@ This repository contains an iOS film browser project that utilizes reactive and 
 * [Firebase Analytics](https://github.com/firebase/firebase-ios-sdk) and [Firebase Remote Config](https://github.com/firebase/firebase-ios-sdk)
 * [JGProgressHUD](https://github.com/JonasGessner/JGProgressHUD)
 * [Swinject](https://github.com/Swinject/Swinject) and [SwinjectAutoregistration](https://github.com/Swinject/SwinjectAutoregistration)
+* [Reachability](https://github.com/tonymillion/Reachability)
 
 ## Installation
 

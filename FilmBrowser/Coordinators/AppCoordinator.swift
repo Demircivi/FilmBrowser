@@ -12,10 +12,14 @@ import class Swinject.Container
 
 internal enum AppRoute: Route {
     case splash
+    case noInternet
     case home
 }
 
 internal class AppCoordinator: NavigationCoordinator<AppRoute> {
+    private static let noInternetTitle = "No internet"
+    private static let noInternetDescription = "Cannot reach to the internet, please check your connection"
+    
     private let container: Container
     
     public init(container: Container) {
@@ -28,7 +32,10 @@ internal class AppCoordinator: NavigationCoordinator<AppRoute> {
         switch route {
         case .splash:
             return getSplashTransition(for: route)
-            
+        
+        case .noInternet:
+            return getNoInternetTransition()
+        
         case .home:
             return getHomeTransition(for: route)
         }
@@ -41,6 +48,16 @@ internal class AppCoordinator: NavigationCoordinator<AppRoute> {
         let viewController = self.container.resolveViewControllerOrThrow(SplashViewController.self, viewModel: viewModel)
         
         return .push(viewController)
+    }
+    
+    private func getNoInternetTransition() -> NavigationTransition {
+        let viewController = UIAlertController(
+            title: AppCoordinator.noInternetTitle,
+            message: AppCoordinator.noInternetDescription,
+            preferredStyle: .alert
+        )
+        
+        return .present(viewController)
     }
     
     private func getHomeTransition(for route: AppRoute) -> NavigationTransition {

@@ -81,6 +81,7 @@ PODS:
   - nanopb/decode (1.30905.0)
   - nanopb/encode (1.30905.0)
   - PromisesObjC (1.2.10)
+  - Reachability (3.2)
   - RxAlamofire (5.6.0):
     - RxAlamofire/Core (= 5.6.0)
   - RxAlamofire/Core (5.6.0):
@@ -115,6 +116,7 @@ DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/RemoteConfig
   - JGProgressHUD
+  - Reachability
   - RxAlamofire
   - RxBlocking (~> 5)
   - RxCocoa (~> 5)
@@ -144,6 +146,7 @@ SPEC REPOS:
     - Kingfisher
     - nanopb
     - PromisesObjC
+    - Reachability
     - RxAlamofire
     - RxBlocking
     - RxCocoa
@@ -172,6 +175,7 @@ SPEC CHECKSUMS:
   Kingfisher: 1acb67597a520c2d0310677e66d6e0af455ef757
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
   PromisesObjC: b14b1c6b68e306650688599de8a45e49fae81151
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   RxAlamofire: f34ddbab56fa2a36f99737f4d4ecc22288a1384f
   RxBlocking: 5f700a78cad61ce253ebd37c9a39b5ccc76477b4
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
@@ -183,6 +187,6 @@ SPEC CHECKSUMS:
   SwinjectAutoregistration: 330f5012642a8b5c89a8a4adb0c5e52df07382c0
   XCoordinator: 9ee654fedef1ffede33d5c11677708a555c00542
 
-PODFILE CHECKSUM: 0a1b57e6bcce073965c047d76a1128331da78f78
+PODFILE CHECKSUM: 75b818d81741c6900ed037f13a2b2fa9aafc0e6a
 
 COCOAPODS: 1.9.3

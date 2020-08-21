@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import JGProgressHUD
 
 class HomeViewController: UIViewController, ViewModelBindable {
     private static let homeTitle = "Home"
@@ -22,6 +23,7 @@ class HomeViewController: UIViewController, ViewModelBindable {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet var messageView: HomeViewControllerMessageView!
     
+    private let progressHUD = JGProgressHUD()
     private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
@@ -46,10 +48,23 @@ class HomeViewController: UIViewController, ViewModelBindable {
     }
     
     func bindedViewModel() {
+        bindToLoading()
         bindTableView()
         bindToTableViewSelectedEvents()
         bindMessageView()
         bindToSearchBar()
+    }
+    
+    private func bindToLoading() {
+        self.viewModel.loading
+            .subscribe(onNext: { [unowned self] loading in
+                if loading {
+                    self.progressHUD.show(in: self.view)
+                } else {
+                    self.progressHUD.dismiss()
+                }
+            })
+            .disposed(by: self.disposeBag)
     }
     
     private func bindTableView() {

@@ -10,6 +10,7 @@ import Foundation
 import XCoordinator
 import RxSwift
 import RxCocoa
+import Reachability
 
 internal class SplashViewModel: ViewModelBase<AppRoute> {
     private static let splashLabelConfigKey = "splash_label"
@@ -26,7 +27,13 @@ internal class SplashViewModel: ViewModelBase<AppRoute> {
     private let disposeBag = DisposeBag()
     public let title = BehaviorSubject<String?>(value: nil)
     
-    override func initialized() {
+    public func loaded() {
+        if !Reachability.forInternetConnection().isReachable() {
+            goNoInternet()
+            
+            return
+        }
+        
         self.configService
             .getConfigValue(for: SplashViewModel.splashLabelConfigKey)
             .asObservable()
@@ -39,7 +46,11 @@ internal class SplashViewModel: ViewModelBase<AppRoute> {
     
     private func goToHome(after seconds: Int) {
         Observable<Int>.timer(RxTimeInterval.seconds(seconds), scheduler: MainScheduler.instance)
-            .subscribe(onCompleted: { self.router.trigger(.home) })
+            .subscribe(onCompleted: { [unowned self] in self.router.trigger(.home) })
             .disposed(by: self.disposeBag)
+    }
+    
+    private func goNoInternet() {
+        self.router.trigger(.noInternet)
     }
 }

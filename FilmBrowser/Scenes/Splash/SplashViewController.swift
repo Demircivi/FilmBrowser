@@ -28,6 +28,12 @@ class SplashViewController: UIViewController, ViewModelBindable {
         self.navigationController?.navigationBar.isHidden = true
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        self.viewModel.loaded()
+    }
+    
     func bindedViewModel() {
         self.viewModel.title
             .bind(to: self.splashLabel.rx.text)
