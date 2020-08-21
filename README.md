@@ -1,7 +1,5 @@
 # Film Browser Application
 
----
-
 ## Table Of Contents
 
 * [About](#about)
