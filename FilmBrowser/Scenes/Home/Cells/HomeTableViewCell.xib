@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,7 +19,7 @@
                         <rect key="frame" x="10" y="10" width="60" height="80"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="Azh-Kg-UvK" secondAttribute="height" multiplier="12:16" id="85f-UH-OXN"/>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="UrU-PZ-yNn"/>
+                            <constraint firstAttribute="height" priority="999" constant="80" id="UrU-PZ-yNn"/>
                         </constraints>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="2o0-bV-BBH">
@@ -71,7 +70,6 @@
                     <constraint firstItem="Azh-Kg-UvK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="qfm-eS-YpT"/>
                 </constraints>
             </tableViewCellContentView>
-            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="filmImageView" destination="Azh-Kg-UvK" id="bna-tm-dBI"/>
                 <outlet property="titleLabel" destination="5Mp-nJ-0Ih" id="i6C-fc-WhO"/>

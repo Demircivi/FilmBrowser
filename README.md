@@ -1,5 +1,7 @@
 # Film Browser Application
 
+![Application](https://raw.githubusercontent.com/Demircivi/FilmBrowser/master/Repository/application.gif)
+
 ## Table Of Contents
 
 * [About](#about)

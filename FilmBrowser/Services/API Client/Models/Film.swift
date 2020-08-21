@@ -9,14 +9,17 @@
 import Foundation
 
 struct Film: Decodable {
+    private static let notAvailablePosterURLValue = "N/A"
+    private static let noImageURL = "https://upload.wikimedia.org/wikipedia/commons/0/0a/No-image-available.png"
+    
     let title: String
     let year: String
     let imdbId: String
     let type: String
     let posterURL: String
     
-    public var sanitizedPosterURL: String? {
-        return self.posterURL == "N/A" ? nil : self.posterURL
+    public var sanitizedPosterURL: String {
+        return self.posterURL == Film.notAvailablePosterURLValue ? Film.noImageURL : self.posterURL
     }
     
     enum CodingKeys: String, CodingKey {

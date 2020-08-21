@@ -97,7 +97,7 @@ class HomeViewController: UIViewController, ViewModelBindable {
             .orEmpty
             .filter { !$0.isEmpty }
             .distinctUntilChanged()
-            .throttle(RxTimeInterval.milliseconds(HomeViewController.searchMilliseconds), scheduler: MainScheduler.instance)
+            .debounce(RxTimeInterval.milliseconds(HomeViewController.searchMilliseconds), scheduler: MainScheduler.instance)
             .subscribe(onNext: { [unowned self] text in
                 self.viewModel.fetch(film: text)
             })
