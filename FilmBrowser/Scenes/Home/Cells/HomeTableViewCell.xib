@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="KGk-i7-Jjw" customClass="HomeTableViewCell" customModule="LoodosCase" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="365" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="365" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Azh-Kg-UvK">
+                        <rect key="frame" x="10" y="10" width="60" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Azh-Kg-UvK" secondAttribute="height" multiplier="12:16" id="85f-UH-OXN"/>
+                            <constraint firstAttribute="height" constant="80" id="UrU-PZ-yNn"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="2o0-bV-BBH">
+                        <rect key="frame" x="80" y="25.5" width="72.5" height="49"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Mp-nJ-0Ih">
+                                <rect key="frame" x="0.0" y="0.0" width="41.5" height="26.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Pdh-Kz-jOP">
+                                <rect key="frame" x="0.0" y="29.5" width="72.5" height="19.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JpF-Rr-TuO">
+                                        <rect key="frame" x="0.0" y="0.0" width="35.5" height="19.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ak7-eU-aW4">
+                                        <rect key="frame" x="40.5" y="0.0" width="32" height="19.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="2o0-bV-BBH" firstAttribute="centerY" secondItem="Azh-Kg-UvK" secondAttribute="centerY" id="O61-u9-u7W"/>
+                    <constraint firstAttribute="bottom" secondItem="Azh-Kg-UvK" secondAttribute="bottom" constant="10" id="gda-lu-6Xz"/>
+                    <constraint firstItem="2o0-bV-BBH" firstAttribute="leading" secondItem="Azh-Kg-UvK" secondAttribute="trailing" constant="10" id="jS4-XH-yvf"/>
+                    <constraint firstItem="Azh-Kg-UvK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="mMa-Xv-P9f"/>
+                    <constraint firstItem="Azh-Kg-UvK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="qfm-eS-YpT"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="filmImageView" destination="Azh-Kg-UvK" id="bna-tm-dBI"/>
+                <outlet property="titleLabel" destination="5Mp-nJ-0Ih" id="i6C-fc-WhO"/>
+                <outlet property="typeLabel" destination="JpF-Rr-TuO" id="9yT-1s-cDj"/>
+                <outlet property="yearLabel" destination="ak7-eU-aW4" id="hI6-EB-A2i"/>
+            </connections>
+            <point key="canvasLocation" x="158.69565217391306" y="177.45535714285714"/>
+        </tableViewCell>
+    </objects>
+</document>
